@@ -14,5 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $data = [
+        'title' => 'Homepage',
+        'message' => 'Benvenuti nella nostra homepage dinamica!'
+    ];
+    return view('home', $data);
 });
+
